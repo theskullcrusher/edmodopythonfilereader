@@ -116,7 +116,14 @@ def validate_input(func):
 
         validated_input_records = []
         for each_record in input_records:
-            flag, record = is_valid_record(each_record)
+            # Do not choke if the program fails on an input, record a failure and move to the next
+            # record. Note: Using general 'Exception' is a bad practice, but in this case, we just
+            # want to continue if something is wrong with one particular record
+            try:
+                flag, record = is_valid_record(each_record)
+            except Exception as ex:
+                print("\nException on record : {}\n{}\n".format(each_record, ex))
+                flag = False
             if flag:
                 validated_input_records.append(record)
             else:
