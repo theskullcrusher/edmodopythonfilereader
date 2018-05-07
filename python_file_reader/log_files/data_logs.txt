@@ -6,6 +6,10 @@
 9 2016-06-10-17:53:22 Str1 Value2 Str3
 -1 2016-06-10-17:53:22 “This line is invalid” Str2 Str3
 1 2016-06-10-17:53:22 “This line is valid” Str2 “So is this string”
+1 2016-06-10-17:53:22 Str1  “This line is valid”  “So is this string”
+ 1   2016-06-10-17:53:22  “This line is valid”  “So is this string” Str3
 10 2016-06-10 17:53:22 “Also invalid” Str2 Str3
 1 2016-06-10-17:53:22 “This line is invalid” Str2 Str3 "This is invalid"
 10 2016-06-10-17:53:22 “Also invalid” Str2
+0 notdatetime 1 2 3
+0 2016-16-29-20:53:22 st1 st2 st3
