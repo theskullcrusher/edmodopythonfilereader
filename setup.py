@@ -15,7 +15,7 @@ setup(
       name = "edmodopythonfilereader",
       version = version,
       packages = find_packages(),
-      package_dir = {'app_db':'app_db'},
+      package_dir = {'edmodopythonfilereader':'edmodopythonfilereader'},
       author = 'App',
       author_email = 'ssshah22@asu.edu',
       description = 'Logs Analyzer',
