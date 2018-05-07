@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Mention details about file here"""
+
+"""This class holds the in-memory datastructure used for fast storage and retrieval of data"""
 __author__ = "Suraj Shah"
 __license__ = "GPL"
 __version__ = "3"

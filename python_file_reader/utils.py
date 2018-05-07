@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Mention details about file here"""
+"""This is the utility file with all utility functions"""
 __author__ = "Suraj Shah"
 __license__ = "GPL"
 __version__ = "3"
@@ -20,8 +20,17 @@ QUOTES_LIST = [DOUBLE_QUOTE, LEFT_DOUBLE_QUOTE, RIGHT_DOUBLE_QUOTE]
 QUOTES = "".join(QUOTES_LIST)
 STRING_SIZE = 128
 
+
 def generate_random_string(size):
+    """
+    Generate a random string of capital characters of size 'size' that will be used as
+    placeholder for the actual string with quotation marks, so that the 3 strings can be
+    easily split by space
+    :param size: int size of string
+    :return: random string of size 'size'
+    """
     return ''.join(choice(ascii_uppercase) for _ in range(size))
+
 
 def separate_strings(record):
     """
@@ -30,21 +39,23 @@ def separate_strings(record):
     :return: flag indicating if the record is valid, and if it is valid,
             return the string2
     """
+    # The control comes here only if id and datetime are valid, hence remove
+    # them and focus on the string
     record = record.split(None, 2)[-1]
     strings = re.findall('((?<!\\\)“.*?(?<!\\\)”)', record)
     str_len = len(strings)
-    # if str_len is 3:
-    #     return True, strings[1]
 
     if str_len is 0 or str_len > 3:
         return False, None
 
+    # Replacing detected strings with placeholders for easy separation
     temporary_map = {}
     for i in range(str_len):
         rand_string = generate_random_string(STRING_SIZE)
         record = record.replace(strings[i], rand_string)
         temporary_map[rand_string] = strings[i]
 
+    # Now find string1 if valid else return False
     record_string_list = record.split()
     string_order_map = {}
     if len(record_string_list) == 3:
@@ -66,25 +77,30 @@ def is_valid_record(record):
     :param record: a single string line of input
     :return: return a validity_flag of record along with a tuple of it's ID and string2
     """
+    # clean the record
     record = record.strip()
     record_values_list = record.split()
-    # print(record_values_list)
     if len(record_values_list) < 5:
         return False, ()
 
-    #check if id is unsigned positive number (considering whole numbers so 0 is a valid ID)
+    # Check if id is unsigned positive number (considering whole numbers so 0 is a valid ID)
     if not record_values_list[0].isdigit():
         return False, ()
 
+    # Check if the datetime is valid and in format. If not, it will throw a value error
+    # and return False
     try:
         date_ = datetime.strptime(record_values_list[1], DATE_TIME_FORMAT)
     except ValueError:
         return False, ()
 
+    # If record does not contain any quotes, then it splitting it should result in a list
+    # of size 5.
     contains_quotes = re.findall("["+QUOTES+"]", record)
     if len(record_values_list) == 5 and not contains_quotes:
         return True, (record_values_list[0], record_values_list[3])
-    #use a regex function here
+
+    # Call to the function that works on separating strings, act based on validity flag
     validity_flag, string2 = separate_strings(record)
     if validity_flag:
         return validity_flag, (record_values_list[0], string2)

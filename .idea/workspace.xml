@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3742368d-d970-4b48-a1ca-319d51a26276" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/python_file_reader/file_reader.py" afterPath="$PROJECT_DIR$/python_file_reader/file_reader.py" />
-      <change beforePath="$PROJECT_DIR$/python_file_reader/log_files/data_logs.txt" afterPath="$PROJECT_DIR$/python_file_reader/log_files/data_logs.txt" />
       <change beforePath="$PROJECT_DIR$/python_file_reader/run_app.py" afterPath="$PROJECT_DIR$/python_file_reader/run_app.py" />
       <change beforePath="$PROJECT_DIR$/python_file_reader/search_logs.py" afterPath="$PROJECT_DIR$/python_file_reader/search_logs.py" />
       <change beforePath="$PROJECT_DIR$/python_file_reader/utils.py" afterPath="$PROJECT_DIR$/python_file_reader/utils.py" />
@@ -22,22 +20,22 @@
       <file leaf-file-name="run_app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_file_reader/run_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="e#231#246#0" expanded="true" />
+                <element signature="e#232#247#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file_reader.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="file_reader.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python_file_reader/file_reader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="450">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
-                <element signature="e#215#224#0" expanded="true" />
+                <element signature="e#262#271#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,10 +44,10 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_file_reader/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="96" column="33" lean-forward="true" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+            <state relative-caret-position="1476">
+              <caret line="85" column="7" lean-forward="false" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
               <folding>
-                <element signature="e#215#224#0" expanded="true" />
+                <element signature="e#235#244#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,19 +56,19 @@
       <file leaf-file-name="search_logs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_file_reader/search_logs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="261">
-                <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+              <first_editor relative-caret-position="412">
+                <caret line="37" column="79" lean-forward="false" selection-start-line="37" selection-start-column="79" selection-end-line="37" selection-end-column="79" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -105,6 +103,7 @@
       <find>separate_strings</find>
       <find>args</find>
       <find>parser</find>
+      <find>file_name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,11 +117,11 @@
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/python_file_reader/log_files/data_logs1.txt" />
         <option value="$PROJECT_DIR$/python_file_reader/log_files/data_logs.txt" />
-        <option value="$PROJECT_DIR$/python_file_reader/run_app.py" />
-        <option value="$PROJECT_DIR$/python_file_reader/search_logs.py" />
-        <option value="$PROJECT_DIR$/python_file_reader/file_reader.py" />
-        <option value="$PROJECT_DIR$/python_file_reader/utils.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/python_file_reader/search_logs.py" />
+        <option value="$PROJECT_DIR$/python_file_reader/run_app.py" />
+        <option value="$PROJECT_DIR$/python_file_reader/utils.py" />
+        <option value="$PROJECT_DIR$/python_file_reader/file_reader.py" />
       </list>
     </option>
   </component>
@@ -298,7 +297,7 @@
         <state relative-caret-position="288">
           <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
-            <element signature="e#231#246#0" expanded="true" />
+            <element signature="e#232#247#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -308,7 +307,7 @@
         <state relative-caret-position="756">
           <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
           <folding>
-            <element signature="e#215#224#0" expanded="true" />
+            <element signature="e#235#244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -360,40 +359,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_file_reader/search_logs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_file_reader/run_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#231#246#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_file_reader/file_reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#215#224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_file_reader/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="96" column="33" lean-forward="true" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
-          <folding>
-            <element signature="e#215#224#0" expanded="true" />
+            <element signature="e#232#247#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -409,11 +380,39 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="261">
-            <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <first_editor relative-caret-position="412">
+            <caret line="37" column="79" lean-forward="false" selection-start-line="37" selection-start-column="79" selection-end-line="37" selection-end-column="79" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_file_reader/search_logs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_file_reader/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1476">
+          <caret line="85" column="7" lean-forward="false" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
+          <folding>
+            <element signature="e#235#244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_file_reader/file_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#262#271#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

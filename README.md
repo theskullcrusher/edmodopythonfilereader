@@ -23,6 +23,7 @@ Assumptions Made:
    and considered a part of the string.
 7. I've used pep8 standards in the project along with pylint to generate a score between -10 to 10
    for all my python files, which gives me a 9+/10 in each one.
+8. I've used Python 3.5.2 for this assignment
 
 
 Instructions to run the package:
@@ -34,4 +35,4 @@ Instructions to run the package:
 3. The above command will run on the sample input file in the python_file_reader/
    log_files directory. Please put your input file sample in the same log_files directory
    and mention the file name (without the entire path). Also note that if no filename
-   is specified, all files inside the log_files directory will be used.
+   is specified, all files inside the log_files directory will be used as input.

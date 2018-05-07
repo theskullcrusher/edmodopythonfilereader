@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 """This file is the entry point of the application"""
 __author__ = "Suraj Shah"
 __license__ = "GPL"
@@ -19,9 +20,11 @@ def main(arguments):
     :param arguments: is a dict with input file and verbose options
     :return: does not return anything
     """
+    # read input, get validated records and insert them into the local datastructure
     validated_input_log_records = file_reader.read_input_files(arguments['file'])
     search_object = SearchLogs()
     search_object.insert_multiple(validated_input_log_records)
+    # search the in-memory database for requested ids
     ids = input("Please enter a comma separated list of ids to search for...\n")
     ids_list = ids.split(',')
     ids_list = [x.strip() for x in ids_list]

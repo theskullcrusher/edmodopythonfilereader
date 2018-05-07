@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Mention details about file here"""
+
+"""This method reads input files and sends them over for cleaning and validation"""
 __author__ = "Suraj Shah"
 __license__ = "GPL"
 __version__ = "3"
@@ -18,9 +19,10 @@ INPUT_LOGS_DIRECTORY = os.path.join(BASEDIR, "log_files")
 def read_input_files(file_name):
     """
     This function reads the input file(s) and returns all input lines
-    :param args: is a filename
+    :param file_name: is a filename
     :return: all input lines
     """
+    # Read the said input file, or all files in logfile dir if no input file specified
     input_file_names = []
     for name in os.listdir(INPUT_LOGS_DIRECTORY):
         if not name.endswith(".py"):
