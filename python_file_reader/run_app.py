@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """Mention details about file here"""
 __author__ = "Suraj Shah"
-__copyright__ = ""
 __license__ = "GPL"
 __version__ = "3"
 __maintainer__ = "Suraj Shah"
@@ -15,7 +14,7 @@ import math
 from functools import reduce
 import traceback
 from time import time
-from python_file_reader import python_file_reader
+from python_file_reader import file_reader
 from python_file_reader.search_logs import SearchLogs
 
 def main(args):
@@ -25,12 +24,12 @@ def main(args):
     :return: does not return anything
     """
     if args['verbose'].lower() is "true":
-        python_file_reader.VERBOSE_FLAG = True
+        file_reader.VERBOSE_FLAG = True
 
-    validated_input_log_records = python_file_reader.read_input_files(args['file'])
+    validated_input_log_records = file_reader.read_input_files(args['file'])
     search_object = SearchLogs()
-    search_object.insert(validated_input_log_records)
-    ids = input("Please enter a comma separated list of ids to search for...")
+    search_object.insert_multiple(validated_input_log_records)
+    ids = input("Please enter a comma separated list of ids to search for...\n")
     ids_list = ids.split(',')
     ids_list = [x.strip() for x in ids_list]
     output_tuple_list = search_object.search(ids_list)

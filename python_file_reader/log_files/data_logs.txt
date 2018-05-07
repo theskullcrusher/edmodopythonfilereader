@@ -1,9 +1,10 @@
-7 2016-06-10-17:53:22 “A quoted string we don’t care about” “The string we do
-care about.” “Another string we don’t care about with escaped\” \” quotes. ”
+10 2016-06-10-17:53:22 “Also invalid” Str2
+7 2016-06-10-17:53:22 “A quoted string we don’t care about” “The string we do care about.” “Another string we don’t care about with escaped\” \” quotes. ”
 8 2016-06-10-17:53:22 Str1 Value Str3
 8 2016-06-10-17:53:22 Str1 Value Str3
 8 2016-06-10-17:53:22 Str1 Value2 Str3
 9 2016-06-10-17:53:22 Str1 Value2 Str3
 -1 2016-06-10-17:53:22 “This line is invalid” Str2 Str3
+1 2016-06-10-17:53:22 “This line is valid” Str2 “So is this string”
 10 2016-06-10 17:53:22 “Also invalid” Str2 Str3
-10 2016-06-10-17:53:22 “Also invalid” Str2
+1 2016-06-10-17:53:22 “This line is invalid” Str2 Str3 "This is invalid"

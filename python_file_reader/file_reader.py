@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """Mention details about file here"""
 __author__ = "Suraj Shah"
-__copyright__ = ""
 __license__ = "GPL"
 __version__ = "3"
 __maintainer__ = "Suraj Shah"
@@ -25,8 +24,9 @@ import math
 from functools import reduce
 import traceback
 from time import time
-from python_file_reader. utils import (validate_input_cover)
-INPUT_LOGS_DIRECTORY = "log_files"
+from python_file_reader.utils import validate_input_cover
+BASEDIR = "python_file_reader"
+INPUT_LOGS_DIRECTORY = os.path.join(BASEDIR,"log_files")
 VERBOSE_FLAG = False
 
 

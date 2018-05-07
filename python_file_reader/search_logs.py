@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """Mention details about file here"""
 __author__ = "Suraj Shah"
-__copyright__ = ""
 __license__ = "GPL"
 __version__ = "3"
 __maintainer__ = "Suraj Shah"
@@ -13,10 +12,9 @@ __status__ = "Production"
 class SearchLogs:
 
     def __init__(self):
-        memory_map = {}
+        self.memory_map = {}
 
-
-    def insert(self, input_tuple_list):
+    def insert_multiple(self, input_tuple_list):
         """
         Add a list of tuple entries to the in-memory map datastructure where tuple consists
         of (id, string2)
