@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 """Mention details about file here"""
@@ -9,11 +8,7 @@ __maintainer__ = "Suraj Shah"
 __email__ = "ssshah22@asu.edu"
 __status__ = "Production"
 
-import os, sys
-import argparse
-import math, re
-from functools import reduce
-import traceback
+import re
 from random import choice
 from string import ascii_uppercase
 from datetime import datetime
@@ -26,7 +21,7 @@ QUOTES = "".join(QUOTES_LIST)
 STRING_SIZE = 128
 
 def generate_random_string(size):
-    return  ''.join(choice(ascii_uppercase) for _ in range(size))
+    return ''.join(choice(ascii_uppercase) for _ in range(size))
 
 def separate_strings(record):
     """
@@ -36,7 +31,7 @@ def separate_strings(record):
             return the string2
     """
     record = record.split(None, 2)[-1]
-    strings = re.findall('(“.*?(?<!\\\)”)', record)
+    strings = re.findall('((?<!\\\)“.*?(?<!\\\)”)', record)
     str_len = len(strings)
     # if str_len is 3:
     #     return True, strings[1]
@@ -52,7 +47,7 @@ def separate_strings(record):
 
     record_string_list = record.split()
     string_order_map = {}
-    if len(record_string_list) is 3:
+    if len(record_string_list) == 3:
         for n, each_string in enumerate(record_string_list):
             if each_string in temporary_map.keys():
                 string_order_map[n] = temporary_map[each_string]
@@ -82,12 +77,12 @@ def is_valid_record(record):
         return False, ()
 
     try:
-        date = datetime.strptime(record_values_list[1], DATE_TIME_FORMAT)
+        date_ = datetime.strptime(record_values_list[1], DATE_TIME_FORMAT)
     except ValueError:
         return False, ()
 
     contains_quotes = re.findall("["+QUOTES+"]", record)
-    if len(record_values_list) is 5 and not contains_quotes:
+    if len(record_values_list) == 5 and not contains_quotes:
         return True, (record_values_list[0], record_values_list[3])
     #use a regex function here
     validity_flag, string2 = separate_strings(record)
@@ -96,29 +91,23 @@ def is_valid_record(record):
     return False, ()
 
 
-def validate_input_cover(verbose_flag):
-    """Outer function on decorator just to pass it verbose flag"""
-    def validate_input(func):
-        """This decorator validates input and sends only valid input back along with the count of invalid inputs"""
-        def wrapper(*args, **kwargs):
-            invalid_records_count = 0
-            input_records = func(*args, **kwargs)
-            if verbose_flag:
-                print("Cleaning input for valid records...")
+def validate_input(func):
+    """This decorator validates input and sends only valid input
+       back along with the count of invalid inputs"""
+    def wrapper(*args, **kwargs):
+        invalid_records_count = 0
+        input_records = func(*args, **kwargs)
 
-            validated_input_records = []
-            for each_record in input_records:
-                flag, record = is_valid_record(each_record)
-                if flag:
-                    validated_input_records.append(record)
-                else:
-                    print(each_record)
-                    invalid_records_count += 1
+        validated_input_records = []
+        for each_record in input_records:
+            flag, record = is_valid_record(each_record)
+            if flag:
+                validated_input_records.append(record)
+            else:
+                # print(each_record)
+                invalid_records_count += 1
 
-            print("Found {} invalid records out of a total of {} records...".format(invalid_records_count,
-                                                                                    len(input_records)))
-            if verbose_flag:
-                print("\nAll records cleaned...")
-            return validated_input_records
-        return wrapper
-    return validate_input
+        print("Found {} invalid records out of a total of {} records..."
+              .format(invalid_records_count, len(input_records)))
+        return validated_input_records
+    return wrapper

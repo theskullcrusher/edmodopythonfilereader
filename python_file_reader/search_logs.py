@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 """Mention details about file here"""
 __author__ = "Suraj Shah"
@@ -21,11 +20,11 @@ class SearchLogs:
         :param input_tuple_list: list of tuples of the form (id, string2)
         :return: None
         """
-        for id, string2 in input_tuple_list:
-            if id in self.memory_map:
-                self.memory_map[id].append(string2)
+        for id_, string2 in input_tuple_list:
+            if id_ in self.memory_map:
+                self.memory_map[id_].append(string2)
             else:
-                self.memory_map[id] = [string2]
+                self.memory_map[id_] = [string2]
 
     def search(self, ids_list):
         """
@@ -34,8 +33,8 @@ class SearchLogs:
         :return: list of tuples of the form (id, string2)
         """
         output_tuple_list = []
-        for id in ids_list:
-            if id in self.memory_map:
-                for string2 in self.memory_map[id]:
-                    output_tuple_list.append((id, string2))
+        for id_ in ids_list:
+            if id_ in self.memory_map:
+                for string2 in self.memory_map[id_]:
+                    output_tuple_list.append((id_, string2))
         return output_tuple_list
